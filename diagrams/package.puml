@@ -1,0 +1,82 @@
+@startuml
+
+skinparam componentStyle rectangle
+skinparam linetype ortho
+
+package snoscience {
+
+    frame _activation {
+
+        node functions {
+
+            component sigmoid {
+            }
+
+            component sigmoid_prime {
+            }
+        }
+    }
+
+    frame _layers {
+
+        node classes {
+
+            component BasicLayer {
+            }
+
+            component Layer {
+            }
+        }
+    }
+
+    frame _loss {
+
+        node functions {
+
+            component mse {
+            }
+
+            component mse_prime {
+            }
+        }
+    }
+
+    frame _neurons {
+
+        node classes {
+
+            component Neuron {
+            }
+        }
+    }
+
+    frame metrics {
+
+        node functions {
+
+            component calculate_mse {
+            }
+
+            component calculate_accuracy {
+            }
+        }
+    }
+
+    frame networks {
+
+        node classes {
+
+            component NeuralNetwork {
+            }
+        }
+    }
+}
+
+_activation -[hidden]> _layers
+_layers -[hidden]> _loss
+_loss -[hidden]> _neurons
+
+_activation -[hidden]-> metrics
+metrics -[hidden]> networks
+
+@enduml

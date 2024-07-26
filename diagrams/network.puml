@@ -1,0 +1,20 @@
+@startuml
+
+skinparam linetype ortho
+
+package snoscience {
+
+class networks.NeuralNetwork {
+_SUPPORTED: dict
+_LOSS: dict
+
+_inputs: int
+_layers: list
+_outputs: int
+__
+add_layer()
+predict()
+train()
+}
+
+@enduml

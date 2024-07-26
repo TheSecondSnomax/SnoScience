@@ -1,0 +1,35 @@
+@startuml
+
+skinparam linetype ortho
+
+package snoscience {
+
+class _layers.BasicLayer {
+y: ndarray
+y_prime: ndarray
+
+previous: Union[BasicLayer, Layer, None]
+next: Union[BasicLayer, Layer, None]
+}
+
+class _layers.Layer {
+previous: Union[BasicLayer, Layer]
+next: Union[BasicLayer, Layer]
+
+activation: str
+neurons: list[Neuron]
+__
+add_neurons()
+train_neurons()
+
+calculate_x()
+calculate_y()
+calculate_y_prime()
+
+calculate_total()
+calculate_total_layer()
+calculate_total_neuron()
+}
+_layers.BasicLayer <|-- _layers.Layer
+
+@enduml

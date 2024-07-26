@@ -1,0 +1,29 @@
+@startuml
+
+skinparam linetype ortho
+
+package snoscience {
+
+class _neurons.Neuron {
+x: ndarray
+y: ndarray
+y_prime: ndarray
+
+weights: ndarray
+bias: float
+
+total_weights: ndarray
+total_bias: float
+position: int
+
+activation: dict
+optimiser: dict
+__
+calculate_x()
+calculate_y()
+calculate_y_prime()
+train()
+sgd()
+}
+
+@enduml

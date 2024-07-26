@@ -1,0 +1,1429 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../design/">
+      
+      
+        <link rel="next" href="../tests/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
+    
+    
+      
+        <title>Methods - SnoScience</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#methods" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="SnoScience" class="md-header__button md-logo" aria-label="SnoScience" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SnoScience
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Methods
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="SnoScience" class="md-nav__button md-logo" aria-label="SnoScience" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    SnoScience
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    User guide
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            User guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_guide/getting_started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_guide/reference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Developer guide
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Developer guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Methods
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Methods
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#neuron" class="md-nav__link">
+    <span class="md-ellipsis">
+      Neuron
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Neuron">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initialise" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initialise
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculate-x" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculate X
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculate-y" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculate Y
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculate-y_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculate Y'
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#train" class="md-nav__link">
+    <span class="md-ellipsis">
+      Train
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Layer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initialise_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initialise
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-neurons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add neurons
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculate-x_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculate X
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculate-y_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculate Y
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculate-y_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculate Y'
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#train-neurons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Train neurons
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculate-total-derivatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculate total derivatives
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculate-partial-derivatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculate partial derivatives
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Calculate partial derivatives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#derivative-fracdeltaldeltao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Derivative \(\frac{\delta{L}}{\delta{O}}\)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#derivative-fracdeltaodeltan-or-fracdeltan_adeltan_b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Derivative \(\frac{\delta{O}}{\delta{N}}\) or \(\frac{\delta{N_{a}}}{\delta{N_{b}}}\)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#derivative-fracdeltandeltaw_n" class="md-nav__link">
+    <span class="md-ellipsis">
+      Derivative \(\frac{\delta{N}}{\delta{W_N}}\)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#derivative-fracdeltandeltab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Derivative \(\frac{\delta{N}}{\delta{B}}\)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code implementation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initialise_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initialise
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add layer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#train_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Train
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#predict" class="md-nav__link">
+    <span class="md-ellipsis">
+      Predict
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tests/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tests
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release_notes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#neuron" class="md-nav__link">
+    <span class="md-ellipsis">
+      Neuron
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Neuron">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initialise" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initialise
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculate-x" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculate X
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculate-y" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculate Y
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculate-y_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculate Y'
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#train" class="md-nav__link">
+    <span class="md-ellipsis">
+      Train
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Layer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initialise_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initialise
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-neurons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add neurons
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculate-x_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculate X
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculate-y_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculate Y
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculate-y_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculate Y'
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#train-neurons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Train neurons
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculate-total-derivatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculate total derivatives
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculate-partial-derivatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculate partial derivatives
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Calculate partial derivatives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#derivative-fracdeltaldeltao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Derivative \(\frac{\delta{L}}{\delta{O}}\)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#derivative-fracdeltaodeltan-or-fracdeltan_adeltan_b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Derivative \(\frac{\delta{O}}{\delta{N}}\) or \(\frac{\delta{N_{a}}}{\delta{N_{b}}}\)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#derivative-fracdeltandeltaw_n" class="md-nav__link">
+    <span class="md-ellipsis">
+      Derivative \(\frac{\delta{N}}{\delta{W_N}}\)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#derivative-fracdeltandeltab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Derivative \(\frac{\delta{N}}{\delta{B}}\)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code implementation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initialise_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initialise
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add layer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#train_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Train
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#predict" class="md-nav__link">
+    <span class="md-ellipsis">
+      Predict
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="methods">Methods</h1>
+<h2 id="classes">Classes</h2>
+<p>The primary functionalities of the NN are contained in the "Neuron", "Layer", and "NeuralNetwork" classes.
+For each of these classes the class diagram is given and each method is described in detail.
+This package uses <a href="https://numpy.org/doc/stable/">NumPy</a> arrays for all its calculations. 
+This section starts with the setup of a NN, and all subsequent examples given in each section are based on this setup.</p>
+<h2 id="setup">Setup</h2>
+<p>The network is set up as follows:</p>
+<ul>
+<li>2 inputs (<span class="arithmatex">\(I\)</span>) per sample, 2 samples in total.</li>
+<li>2 neurons (<span class="arithmatex">\(N\)</span>) in first hidden layer (<span class="arithmatex">\(H1\)</span>).</li>
+<li>3 neurons in second hidden layer (<span class="arithmatex">\(H2\)</span>).</li>
+<li>2 outputs (<span class="arithmatex">\(O\)</span>) per sample, thus 2 neurons in output layer, and thus 2 losses (<span class="arithmatex">\(L\)</span>).</li>
+<li>all neurons are initialised with weights and biases equal to <span class="arithmatex">\(\frac{1}{2}\)</span> to simplify the calculations.</li>
+</ul>
+<p>See the table below for naming conventions:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Input</th>
+<th style="text-align: center;">Hidden 1</th>
+<th style="text-align: center;">Hidden 2</th>
+<th style="text-align: center;">Output</th>
+<th style="text-align: center;">Loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(I1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(N11\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(N21\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(O1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(L1\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(I2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(N12\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(N22\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(O2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(L2\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="arithmatex">\(N23\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p>The naming conventions for the neuron weights (<span class="arithmatex">\(W_N\)</span>) and biases (<span class="arithmatex">\(B_N\)</span>) are given below, with <span class="arithmatex">\(N22\)</span> and <span class="arithmatex">\(O1\)</span> as examples:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><span class="arithmatex">\(N22\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(O1\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(W_{N22_1}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(W_{O1_1}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(W_{N22_2}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(W_{O1_2}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(B_{N22}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(W_{O1_3}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="arithmatex">\(B_{O1}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>The inputs and outputs of the samples are defined in the following matrices:</p>
+<div class="arithmatex">\[
+\textit{I} =
+\begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix}
+\quad
+\textit{O} =
+\begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}
+\]</div>
+<h2 id="neuron">Neuron</h2>
+<p><img alt="" src="../../images/neuron.png" /></p>
+<h3 id="initialise">Initialise</h3>
+<p>Each Neuron instance is initialised with a randomised weight vector and bias scalar with values between 0.00 and 0.01.
+The number of weights is determined by the number of neurons in the previous layer.
+It turns out that the learning rate used in SGD is correlated to these initialised values,
+and using the 0.01 factor leads to commonly used learning rates between 0.00 and 0.05.</p>
+<h3 id="calculate-x">Calculate X</h3>
+<p>This method calculates the input for the neuron (<span class="arithmatex">\(X_N\)</span>).
+It is calculated with the following equation:</p>
+<div class="arithmatex">\[
+X_{N1} = (I * W_N) + B_N
+\]</div>
+<div class="arithmatex">\[
+X_{N2_+} = (H_{prev} * W_N) + B_N
+\]</div>
+<p>E.g. for <span class="arithmatex">\(N11\)</span>:</p>
+<div class="arithmatex">\[
+X_{N11}=
+\begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix} *
+\begin{bmatrix} \frac{1}{2} \\ \frac{1}{2} \end{bmatrix} + \frac{1}{2} =
+\begin{bmatrix} 2 \\ 4 \end{bmatrix}
+\]</div>
+<h3 id="calculate-y">Calculate Y</h3>
+<p>This method calculates the output for the neuron (<span class="arithmatex">\(N\)</span>).
+It depends on the activation function used, which is taken from the "_activation" module.
+For the sigmoid, it is calculated as follows:</p>
+<div class="arithmatex">\[
+N = \frac{1}{1 + (e^{-X_N})}
+\]</div>
+<p>E.g. for <span class="arithmatex">\(N11\)</span>:</p>
+<div class="arithmatex">\[
+N11 = \frac{1}{1 + e^{-\begin{bmatrix} 2 \\ 4 \end{bmatrix}}} =
+\begin{bmatrix} 0.8808 \\ 0.9820 \end{bmatrix}
+\]</div>
+<p>Note that the naming convention for the neuron output is equal to the neuron itself. 
+This is intentionally done to improve the readability of the total derivatives, which is further discussed in the <a href="#layer">layer</a> section.</p>
+<h3 id="calculate-y_1">Calculate Y'</h3>
+<p>This method calculates the output derivative for the neuron (<span class="arithmatex">\(N'\)</span>).
+It depends on the activation function used, which is taken from the "_activation module.
+For the sigmoid, the derivative is calculated as follows:</p>
+<div class="arithmatex">\[
+N' = N * (1 - N)
+\]</div>
+<p>E.g. for <span class="arithmatex">\(N11\)</span>:</p>
+<div class="arithmatex">\[
+N11' = \begin{bmatrix} 0.8808 \\ 0.9820 \end{bmatrix} *
+(1 - \begin{bmatrix} 0.8808 \\ 0.9820 \end{bmatrix}) =
+\begin{bmatrix} 0.1050 \\ 0.0177 \end{bmatrix}
+\]</div>
+<h3 id="train">Train</h3>
+<p>This method trains the neuron based on the given optimiser.
+For SGD, the total derivative of the loss with respect to the neuron's weights (<span class="arithmatex">\(\frac{\delta{L}}{\delta{W_N}}\)</span>)
+and its bias (<span class="arithmatex">\(\frac{\delta{L}}{\delta{B_N}}\)</span>) need to be known.
+This is not a straightforward calculation, and is further discussed in the <a href="#layer">layer</a> section.
+Once calculated, they are stored in the "total_weights" and "total_bias" attributes of the neuron,
+and the training can be done using the following equations, with <span class="arithmatex">\(l\)</span> corresponding to the learning rate:</p>
+<div class="arithmatex">\[
+W_{N_{new}} = W_{N_{old}} - (l * \frac{\delta{L}}{\delta{W_N}})
+\]</div>
+<div class="arithmatex">\[
+B_{N_{new}} = B_{N_{old}} - (l * \frac{\delta{L}}{\delta{B_N}})
+\]</div>
+<h3 id="layer">Layer</h3>
+<p><img alt="" src="../../images/layer.png" /></p>
+<h3 id="initialise_1">Initialise</h3>
+<p>After each Layer instance is initiated, a link must be made between it and its previous and next layers.
+This is done automatically when using the "add_layer" method in the NeuralNetwork class. 
+The link enables the feed forward and back propagation properties of the NN.</p>
+<h3 id="add-neurons">Add neurons</h3>
+<p>This method adds neurons to the layer and assigns them a position, e.g. the 5th neuron added to the layer will have position 4, as counting starts at 0.
+This property is required when calculating the total derivatives.</p>
+<h3 id="calculate-x_1">Calculate X</h3>
+<p>This method calls the "calculate_x" method for each neuron in the layer. </p>
+<h3 id="calculate-y_2">Calculate Y</h3>
+<p>This method calls the "calculate_y" method for each neuron in the layer, and horizontally stacks the neuron output vectors as the layer output array.
+The stacking is done to prevent unnecessary recalculations when calculating the total derivatives.
+E.g. for <span class="arithmatex">\(H1\)</span> consisting of <span class="arithmatex">\(N11\)</span> and <span class="arithmatex">\(N12\)</span>:</p>
+<div class="arithmatex">\[
+N11 = N12 = \begin{bmatrix} 0.8808 \\ 0.9820 \end{bmatrix}
+\quad
+H1 = \begin{bmatrix} 0.8808 &amp; 0.8808 \\ 0.9820 &amp; 0.9820 \end{bmatrix}
+\]</div>
+<h3 id="calculate-y_3">Calculate Y'</h3>
+<p>This method calls the "calculate_y_prime" method for each neuron in the layer.</p>
+<h3 id="train-neurons">Train neurons</h3>
+<p>This method calls the "train" method for each neuron in the layer. 
+For SGD, the "calculate_total" method is called beforehand, to calculate the total derivatives for each neuron in the layer.</p>
+<h3 id="calculate-total-derivatives">Calculate total derivatives</h3>
+<p>As described in the <a href="#train">train</a> section, <span class="arithmatex">\(\frac{\delta{L}}{\delta{W_N}}\)</span> and <span class="arithmatex">\(\frac{\delta{L}}{\delta{B_N}}\)</span> are required to implement SGD as an optimiser.
+These can be subdivided in the total derivative for the neuron <span class="arithmatex">\(\frac{\delta{L}}{\delta{N}}\)</span>, its weights <span class="arithmatex">\(\frac{\delta{L}}{\delta{W_N}}\)</span>, 
+both of which are vectors, and its bias <span class="arithmatex">\(\frac{\delta{L}}{\delta{B_N}}\)</span>, which is a scalar. Both <span class="arithmatex">\(\frac{\delta{L}}{\delta{W_N}}\)</span> and <span class="arithmatex">\(\frac{\delta{L}}{\delta{B_N}}\)</span> depend on <span class="arithmatex">\(\frac{\delta{L}}{\delta{N}}\)</span>.
+Using <span class="arithmatex">\(N11\)</span> as an example, the total derivative for the <em>neuron</em> can be formulated as follows using the chain rule:</p>
+<div class="arithmatex">\[
+\begin{align}
+\frac{\delta{L}}{\delta{N11}} =
+(\frac{\delta{L1}}{\delta{O1}} * \frac{\delta{O1}}{\delta{N21}} * \frac{\delta{N21}}{\delta{N11}}) +
+(\frac{\delta{L2}}{\delta{O2}} * \frac{\delta{O2}}{\delta{N21}} * \frac{\delta{N21}}{\delta{N11}}) \hspace{2pt} + \\[4pt]
+(\frac{\delta{L1}}{\delta{O1}} * \frac{\delta{O1}}{\delta{N22}} * \frac{\delta{N22}}{\delta{N11}}) +
+(\frac{\delta{L2}}{\delta{O2}} * \frac{\delta{O2}}{\delta{N22}} * \frac{\delta{N22}}{\delta{N11}}) \hspace{2pt} + \\[4pt]
+(\frac{\delta{L1}}{\delta{O1}} * \frac{\delta{O1}}{\delta{N23}} * \frac{\delta{N23}}{\delta{N11}}) + 
+(\frac{\delta{L2}}{\delta{O2}} * \frac{\delta{O2}}{\delta{N23}} * \frac{\delta{N23}}{\delta{N11}}) \hspace{10pt}
+\end{align}
+\]</div>
+<p>The parts containing <span class="arithmatex">\(\frac{\delta{L1}}{\delta{O2}}\)</span> and <span class="arithmatex">\(\frac{\delta{L2}}{\delta{O1}}\)</span>
+have been omitted in the equation, as they always equate to 0. 
+The total derivative for neuron's weights and bias can then be calculated with these equations:</p>
+<div class="arithmatex">\[
+\frac{\delta{L}}{\delta{W_{N11}}} = \frac{\delta{L}}{\delta{N11}} * \frac{\delta{N11}}{\delta{W_{N11}}}
+\]</div>
+<div class="arithmatex">\[
+\frac{\delta{L}}{\delta{B_{N11}}} = \frac{\delta{L}}{\delta{N11}} * \frac{\delta{N11}}{\delta{B_{N11}}}
+\]</div>
+<h3 id="calculate-partial-derivatives">Calculate partial derivatives</h3>
+<p>The partial derivatives within the total derivative have a pattern, which the code uses to recursively calculate their values, namely:</p>
+<h4 id="derivative-fracdeltaldeltao">Derivative <span class="arithmatex">\(\frac{\delta{L}}{\delta{O}}\)</span></h4>
+<p>This partial derivative (the loss derivative) always depends on the loss function used and the output of the network.</p>
+<h4 id="derivative-fracdeltaodeltan-or-fracdeltan_adeltan_b">Derivative <span class="arithmatex">\(\frac{\delta{O}}{\delta{N}}\)</span> or <span class="arithmatex">\(\frac{\delta{N_{a}}}{\delta{N_{b}}}\)</span></h4>
+<p>For these partial derivatives, the following holds:</p>
+<div class="arithmatex">\[
+\frac{\delta{O}}{\delta{N}} = O' * W_{N}
+\quad
+\frac{\delta{N_{a}}}{\delta{N_{b}}} = N_{a}' * W_{N_{b}}
+\]</div>
+<p>To select the correct <span class="arithmatex">\(W\)</span>, the position of that neuron in the previous layer needs to be known. 
+To determine <span class="arithmatex">\(\frac{\delta{N22}}{\delta{N11}}\)</span> for example, the first weight of <span class="arithmatex">\(N22\)</span> has to be taken, 
+as <span class="arithmatex">\(N11\)</span> is the first neuron in <span class="arithmatex">\(H1\)</span>:</p>
+<div class="arithmatex">\[
+N22(X_{N22}) = N22(W_{N22_{1}} * N11 + W_{N22_{2}} * N12 + B_{N22})
+\]</div>
+<div class="arithmatex">\[
+\frac{\delta{N22}}{\delta{N11}} = N22'(W_{N22_{1}} * N11 + W_{N22_{2}} * N12 + B_{N22})
+\]</div>
+<div class="arithmatex">\[
+\frac{\delta{N22}}{\delta{N11}} = N22' * W_{N22_{1}}
+\]</div>
+<h4 id="derivative-fracdeltandeltaw_n">Derivative <span class="arithmatex">\(\frac{\delta{N}}{\delta{W_N}}\)</span></h4>
+<p>For this partial derivative, the following holds:</p>
+<div class="arithmatex">\[
+\frac{\delta{N1}}{\delta{W_{N1}}} = I * N1'
+\quad
+\frac{\delta{N2_+}}{\delta{W_{N2_+}}} = H_{prev} * N2_+'
+\]</div>
+<p>To select the correct <span class="arithmatex">\(N\)</span>, or in case of the first layer, <span class="arithmatex">\(I\)</span>, the neuron corresponding to the weight has to be chosen.
+Take <span class="arithmatex">\(N22\)</span> for example:</p>
+<div class="arithmatex">\[
+\frac{\delta{N22}}{\delta{W_{N22}}} = H1 * N22'
+\quad
+\frac{\delta{N22}}{\delta{W_{N22_1}}} = N11 * N22'
+\quad
+\frac{\delta{N22}}{\delta{W_{N22_2}}} = N12 * N22'
+\]</div>
+<p>Instead of the neuron output, the input is chosen in the first layer. Using the same example for <span class="arithmatex">\(N11\)</span>:</p>
+<div class="arithmatex">\[
+\frac{\delta{N11}}{\delta{W_{N11}}} = I * N11'
+\quad
+\frac{\delta{N11}}{\delta{W_{N11_1}}} = I1 * N11'
+\quad
+\frac{\delta{N11}}{\delta{W_{N11_2}}} = I2 * N11'
+\]</div>
+<h4 id="derivative-fracdeltandeltab">Derivative <span class="arithmatex">\(\frac{\delta{N}}{\delta{B}}\)</span></h4>
+<p>For this partial derivative, the following holds:</p>
+<div class="arithmatex">\[
+\frac{\delta{N_a}}{\delta{B_a}} = N_a'
+\]</div>
+<div class="arithmatex">\[
+\frac{\delta{N11}}{\delta{B_{N11}}} = N11'
+\]</div>
+<h3 id="code-implementation">Code implementation</h3>
+<p>The "calculate_total" method calculates <span class="arithmatex">\(\frac{\delta{L}}{\delta{W_N}}\)</span> and <span class="arithmatex">\(\frac{\delta{L}}{\delta{B_N}}\)</span> for each neuron in its layer.
+To do this, it calls the "calculate_total_neuron" method to calculate <span class="arithmatex">\(\frac{\delta{L}}{\delta{N}}\)</span>. 
+This method uses the previously described patterns to determine the correct partial derivative for the given neuron. 
+For as long as the output layer is not yet reached, this method calls the "calculate_total_layer" method in the next layer,
+which in turn calls the "calculate_total_neuron" method again for each neuron inside its layer. 
+This recursion stops once the output layer is reached, which returns the partial derivatives for the output neurons.
+The resulting partial derivatives are then summed and eventually returned to the original "calculate_total_neuron" method.</p>
+<p>For <span class="arithmatex">\(\frac{\delta{L}}{\delta{B_N}}\)</span>, these individual elements in the returned array can simply be summed, resulting in a scalar.
+For <span class="arithmatex">\(\frac{\delta{L}}{\delta{W_N}}\)</span>, the total derivative for the neuron is multiplied with its output derivative, per output from the previous layer, and then summed.
+The result is a vector equal in size to the neuron's weights. This logic is best explained with an example using
+<span class="arithmatex">\(\frac{\delta{L}}{\delta{W_{N11}}}\)</span>, with the arbitrary array <span class="arithmatex">\(\begin{bmatrix} 5 \\ 10 \end{bmatrix}\)</span> for <span class="arithmatex">\(\frac{\delta{L}}{\delta{N11}}\)</span>:</p>
+<div class="arithmatex">\[
+\frac{\delta{L}}{\delta{W_{N11}}} = 
+\frac{\delta{L}}{\delta{N11}} * \frac{\delta{N11}}{\delta{W_{N11}}} 
+= \frac{\delta{L}}{\delta{N11}} * N11' * I
+\]</div>
+<div class="arithmatex">\[
+\frac{\delta{L}}{\delta{W_{N11}}} =
+\begin{bmatrix} 5 \\ 10 \end{bmatrix} *
+\begin{bmatrix} 0.1050 \\ 0.0177 \end{bmatrix} *
+\begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix}
+\]</div>
+<div class="arithmatex">\[
+\frac{\delta{L}}{\delta{W_{N11}}} =
+\begin{bmatrix} (5 * 0.1050 * 1) + (10 * 0.0177 * 3) \\ (5 * 0.1050 * 2) + (10 * 0.0177 * 4) \end{bmatrix}
+\]</div>
+<div class="arithmatex">\[
+\frac{\delta{L}}{\delta{W_{N11}}} = 
+\begin{bmatrix} 1.056 \\ 1.758 \end{bmatrix}
+\]</div>
+<h3 id="network">Network</h3>
+<p><img alt="" src="../../images/network.png" /></p>
+<h4 id="initialise_2">Initialise</h4>
+<p>The network is initialised with the given inputs value, no outputs, and no layers.
+After initialisation the inputs are used to verify if the samples match the network size.</p>
+<h4 id="add-layer">Add layer</h4>
+<p>When new layers are added, the code automatically links the previous and new layers.
+It also automatically creates and links the input and loss layers to simplify the setup.
+The last added layer is assumed to be the output layer, and its neurons are used to verify if the samples match the network size.</p>
+<h4 id="train_1">Train</h4>
+<p>Each training epoch consists of the following steps:</p>
+<ol>
+<li>Select either all, or the given number of samples from the dataset.</li>
+<li>Calculate <span class="arithmatex">\(X\)</span>, <span class="arithmatex">\(Y\)</span>, and <span class="arithmatex">\(Y'\)</span> for all the neurons and all the layers (from input to output).</li>
+<li>Calculate <span class="arithmatex">\(\frac{\delta{L}}{\delta{O}}\)</span>.</li>
+<li>Sequentially train all the neurons per layer.</li>
+</ol>
+<h4 id="predict">Predict</h4>
+<ol>
+<li>Feed-forward <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> through the network to get <span class="arithmatex">\(O\)</span>.</li>
+<li>For classification, select and round the highest value per row, and set all other values to 0.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

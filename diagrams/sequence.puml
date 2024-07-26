@@ -1,0 +1,260 @@
+@startuml sequence
+
+actor user
+
+participant NeuralNetwork
+participant Layer
+participant Neuron
+
+== initialisation ==
+
+user -> NeuralNetwork: init()
+
+activate NeuralNetwork
+
+user <-[#red]- NeuralNetwork: ValueError: unsupported loss function
+user <-[#red]- NeuralNetwork: ValueError: unsupported optimiser
+
+user <- NeuralNetwork: self
+
+deactivate NeuralNetwork
+
+user -> NeuralNetwork: add_layer()
+
+activate NeuralNetwork
+
+user <-[#red]- NeuralNetwork: ValueError: unsupported activation function
+
+NeuralNetwork -> Layer: init()
+
+activate Layer
+
+NeuralNetwork <- Layer: self
+
+deactivate Layer
+
+NeuralNetwork -> Layer: add_neurons()
+
+activate Layer
+
+group neurons
+
+Layer -> Neuron: init()
+
+activate Neuron
+
+Layer <- Neuron: self
+
+deactivate Neuron
+
+end
+
+NeuralNetwork <- Layer: None
+
+deactivate Layer
+
+user <- NeuralNetwork: None
+
+deactivate NeuralNetwork
+
+
+== training ==
+
+
+user -> NeuralNetwork: train()
+
+activate NeuralNetwork
+
+user <-[#red]- NeuralNetwork: ValueError: inputs do not match with network inputs
+user <-[#red]- NeuralNetwork: ValueError: outputs do not match with network outputs
+user <-[#red]- NeuralNetwork: ValueError: no layers present in network
+user <-[#red]- NeuralNetwork: ValueError: number of samples larger than dataset
+
+group epochs
+
+group layers
+
+NeuralNetwork -> Layer: calculate_x()
+
+activate Layer
+
+group neurons
+
+Layer -> Neuron: calculate_x()
+
+activate Neuron
+
+Layer <- Neuron: None
+
+deactivate Neuron
+
+end
+
+NeuralNetwork <- Layer: None
+
+deactivate Layer
+
+NeuralNetwork -> Layer: calculate_y()
+
+activate Layer
+
+group neurons
+
+Layer -> Neuron: calculate_y()
+
+activate Neuron
+
+Neuron -> Neuron: activation()
+
+Layer <- Neuron: None
+
+deactivate Neuron
+
+end
+
+NeuralNetwork <- Layer: None
+
+deactivate Layer
+
+NeuralNetwork -> Layer: calculate_y_prime()
+
+activate Layer
+
+group neurons
+
+Layer -> Neuron: calculate_y_prime()
+
+activate Neuron
+
+Neuron -> Neuron: activation_prime()
+
+Layer <- Neuron: None
+
+deactivate Neuron
+
+end
+
+NeuralNetwork <- Layer: None
+
+deactivate Layer
+
+end
+
+NeuralNetwork -> NeuralNetwork: loss()
+NeuralNetwork -> NeuralNetwork: loss_prime()
+
+group layers
+
+NeuralNetwork -> Layer: train_neurons()
+
+activate Layer
+
+Layer -> Layer: calculate_total()
+
+activate Layer
+
+group recursion
+
+Layer -> Layer: calculate_total_neuron()
+
+activate Layer
+
+Layer -> Layer: calculate_total_layer()
+
+activate Layer
+
+Layer -> Layer: total layer
+
+deactivate Layer
+
+Layer -> Layer: total neuron
+
+deactivate Layer
+
+end
+
+Layer -> Layer: None
+
+deactivate Layer
+
+Layer -> Neuron: train()
+
+activate Neuron
+
+Neuron -> Neuron: optimiser()
+
+Layer <- Neuron: None
+
+deactivate Neuron
+
+NeuralNetwork <- Layer: None
+
+deactivate Layer
+
+end
+
+end
+
+user <- NeuralNetwork: None
+
+deactivate NeuralNetwork
+
+
+== prediction ==
+
+
+user -> NeuralNetwork: predict()
+
+activate NeuralNetwork
+
+group layers
+
+NeuralNetwork -> Layer: calculate_x()
+
+activate Layer
+
+group neurons
+
+Layer -> Neuron: calculate_x()
+
+activate Neuron
+
+Layer <- Neuron: None
+
+deactivate Neuron
+
+end
+
+NeuralNetwork <- Layer: None
+
+deactivate Layer
+
+NeuralNetwork -> Layer: calculate_y()
+
+activate Layer
+
+group neurons
+
+Layer -> Neuron: calculate_y()
+
+activate Neuron
+
+Neuron -> Neuron: activation()
+
+Layer <- Neuron: None
+
+deactivate Neuron
+
+end
+
+NeuralNetwork <- Layer: None
+
+deactivate Layer
+
+end
+
+user <- NeuralNetwork: outputs
+
+deactivate NeuralNetwork
+
+@enduml
